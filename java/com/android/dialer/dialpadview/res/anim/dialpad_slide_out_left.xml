@@ -17,6 +17,7 @@
   -->
 
 <translate xmlns:android="http://schemas.android.com/apk/res/android"
+  android:interpolator="@android:interpolator/accelerate_cubic"
   android:duration="@integer/dialpad_slide_out_duration"
   android:fromXDelta="0"
   android:toXDelta="-100%"/>

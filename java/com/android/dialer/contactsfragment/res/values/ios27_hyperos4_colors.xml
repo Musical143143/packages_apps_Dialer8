@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="ios27_bg_cosmic_start">#FF070A14</color>
+    <color name="ios27_bg_cosmic_center">#FF0E1528</color>
+    <color name="ios27_bg_cosmic_end">#FF151C36</color>
+    <color name="ios27_bg_incall_warm_glow">#668B4513</color>
+    <color name="ios27_glass_surface">#24FFFFFF</color>
+    <color name="ios27_glass_surface_elevated">#30FFFFFF</color>
+    <color name="ios27_glass_surface_pressed">#45FFFFFF</color>
+    <color name="ios27_glass_card_dark">#B3111827</color>
+    <color name="ios27_glass_border_light">#4DFFFFFF</color>
+    <color name="ios27_glass_border_subtle">#29FFFFFF</color>
+    <color name="ios27_glass_dock_bg">#CC0F1629</color>
+    <color name="ios27_accent_blue">#FF3B82F6</color>
+    <color name="ios27_accent_cyan">#FF06B6D4</color>
+    <color name="ios27_accent_violet">#FF8B5CF6</color>
+    <color name="ios27_accent_pink">#FFEC4899</color>
+    <color name="ios27_accent_amber">#FFF59E0B</color>
+    <color name="ios27_accent_emerald">#FF10B981</color>
+    <color name="ios27_call_green_start">#FF34D399</color>
+    <color name="ios27_call_green_end">#FF16A34A</color>
+    <color name="ios27_end_call_red">#FFFF3B30</color>
+    <color name="ios27_missed_call_red">#FFFF453A</color>
+    <color name="ios27_record_red_glow">#4DFF3B30</color>
+    <color name="ios27_text_primary">#FFFFFFFF</color>
+    <color name="ios27_text_secondary">#B8FFFFFF</color>
+    <color name="ios27_text_muted">#80FFFFFF</color>
+</resources>

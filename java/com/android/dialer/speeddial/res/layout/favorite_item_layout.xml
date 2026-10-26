@@ -1,85 +1,19 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!--
- ~ Copyright (C) 2017 The Android Open Source Project
- ~
- ~ Licensed under the Apache License, Version 2.0 (the "License");
- ~ you may not use this file except in compliance with the License.
- ~ You may obtain a copy of the License at
- ~
- ~      http://www.apache.org/licenses/LICENSE-2.0
- ~
- ~ Unless required by applicable law or agreed to in writing, software
- ~ distributed under the License is distributed on an "AS IS" BASIS,
- ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- ~ See the License for the specific language governing permissions and
- ~ limitations under the License
- -->
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:layout_marginTop="8dp"
-    android:layout_marginBottom="12dp">
+<?xml version='1.0' encoding='utf-8'?>
+<LinearLayout xmlns:ns0="http://schemas.android.com/apk/res/android" ns0:orientation="vertical" ns0:layout_width="match_parent" ns0:layout_height="wrap_content" ns0:layout_marginTop="8dp" ns0:layout_marginBottom="12dp" ns0:background="@drawable/bg_speed_dial_glass_tile" ns0:paddingTop="10dp" ns0:paddingBottom="2dp" ns0:paddingStart="3dp" ns0:paddingEnd="3dp" ns0:layout_marginStart="4dp" ns0:layout_marginEnd="4dp">
 
-  <FrameLayout
-      android:id="@+id/avatar_container"
-      android:layout_width="wrap_content"
-      android:layout_height="104dp"
-      android:layout_gravity="center_horizontal"
-      android:layout_marginBottom="8dp"
-      android:minWidth="128dp">
+  <FrameLayout ns0:id="@+id/avatar_container" ns0:layout_width="wrap_content" ns0:layout_height="104dp" ns0:layout_gravity="center_horizontal" ns0:layout_marginBottom="8dp" ns0:minWidth="128dp">
 
-    <QuickContactBadge
-        android:id="@+id/avatar"
-        android:layout_width="104dp"
-        android:layout_height="104dp"
-        android:layout_gravity="center_horizontal"
-        android:clickable="false"
-        android:forceDarkAllowed="false" />
+    <QuickContactBadge ns0:id="@+id/avatar" ns0:layout_width="104dp" ns0:layout_height="104dp" ns0:layout_gravity="center_horizontal" ns0:clickable="false" ns0:forceDarkAllowed="false" />
 
-    <FrameLayout
-        android:id="@+id/video_call_container"
-        android:layout_width="36dp"
-        android:layout_height="36dp"
-        android:layout_gravity="bottom|end"
-        android:layout_marginEnd="12dp">
+    <FrameLayout ns0:id="@+id/video_call_container" ns0:layout_width="36dp" ns0:layout_height="36dp" ns0:layout_gravity="bottom|end" ns0:layout_marginEnd="12dp">
 
-      <ImageView
-          android:layout_width="match_parent"
-          android:layout_height="match_parent"
-          android:src="@drawable/favorite_icon"/>
+      <ImageView ns0:layout_width="match_parent" ns0:layout_height="match_parent" ns0:src="@drawable/favorite_icon" />
 
-      <ImageView
-          android:layout_width="24dp"
-          android:layout_height="24dp"
-          android:layout_gravity="center"
-          android:src="@drawable/quantum_ic_videocam_vd_white_24"/>
+      <ImageView ns0:layout_width="24dp" ns0:layout_height="24dp" ns0:layout_gravity="center" ns0:src="@drawable/quantum_ic_videocam_vd_white_24" />
     </FrameLayout>
   </FrameLayout>
 
-  <TextView
-      android:id="@+id/name"
-      android:layout_width="wrap_content"
-      android:layout_height="wrap_content"
-      android:layout_gravity="center_horizontal"
-      android:layout_marginStart="4dp"
-      android:layout_marginEnd="4dp"
-      android:layout_marginTop="8dp"
-      android:layout_marginBottom="1dp"
-      android:fontFamily="@*android:string/config_headlineFontFamilyMedium"
-      android:textSize="14sp"
-      android:gravity="center_horizontal"
-      style="@style/Dialer.TextAppearance.Primary"/>
+  <TextView ns0:id="@+id/name" ns0:layout_width="wrap_content" ns0:layout_height="wrap_content" ns0:layout_gravity="center_horizontal" ns0:layout_marginStart="4dp" ns0:layout_marginEnd="4dp" ns0:layout_marginTop="8dp" ns0:layout_marginBottom="1dp" ns0:fontFamily="@*android:string/config_headlineFontFamilyMedium" ns0:textSize="14sp" ns0:gravity="center_horizontal" style="@style/Dialer.TextAppearance.Primary" />
 
-  <TextView
-      android:id="@+id/phone_type"
-      android:layout_width="wrap_content"
-      android:layout_height="wrap_content"
-      android:layout_gravity="center_horizontal"
-      android:layout_marginStart="4dp"
-      android:layout_marginEnd="4dp"
-      android:layout_marginBottom="17dp"
-      android:gravity="center_horizontal"
-      style="@style/Dialer.TextAppearance.Secondary"/>
+  <TextView ns0:id="@+id/phone_type" ns0:layout_width="wrap_content" ns0:layout_height="wrap_content" ns0:layout_gravity="center_horizontal" ns0:layout_marginStart="4dp" ns0:layout_marginEnd="4dp" ns0:layout_marginBottom="17dp" ns0:gravity="center_horizontal" style="@style/Dialer.TextAppearance.Secondary" />
 </LinearLayout>

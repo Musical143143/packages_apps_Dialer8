@@ -21,7 +21,9 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/one"
-    style="@style/DialpadKeyButtonStyle">
+    style="@style/DialpadKeyButtonStyle"
+    android:background="@drawable/bg_ios27_dialpad_key"
+    android:layout_margin="6dp">
 
   <LinearLayout
       android:id="@+id/dialpad_key_layout"

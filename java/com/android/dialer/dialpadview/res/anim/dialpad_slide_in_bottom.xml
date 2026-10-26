@@ -14,6 +14,7 @@
      limitations under the License.
 -->
 <translate xmlns:android="http://schemas.android.com/apk/res/android"
+  android:interpolator="@android:interpolator/decelerate_quint"
   android:duration="@integer/dialpad_slide_in_duration"
   android:fromYDelta="100%p"
   android:toYDelta="0"/>

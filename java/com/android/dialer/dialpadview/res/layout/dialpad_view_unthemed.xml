@@ -74,7 +74,15 @@
       android:layout_width="match_parent"
       android:layout_height="?attr/dialpad_digits_adjustable_height"
       android:orientation="horizontal"
-      tools:layout_height="50dp">
+      tools:layout_height="50dp"
+        android:background="@drawable/bg_ios27_glass_digits_card"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="10dp"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:elevation="4dp">
 
     <ImageButton
         android:id="@+id/dialpad_back"
@@ -83,7 +91,7 @@
         android:layout_margin="@dimen/dialpad_overflow_margin"
         android:paddingStart="@dimen/dialpad_digits_menu_left_padding"
         android:paddingEnd="@dimen/dialpad_digits_menu_right_padding"
-        android:background="@drawable/btn_dialpad_key"
+        android:background="@drawable/btn_dialpad_icon"
         android:contentDescription="@string/description_dialpad_back"
         android:gravity="center"
         android:src="@drawable/quantum_ic_close_vd_theme_24"
@@ -98,7 +106,7 @@
         android:layout_margin="@dimen/dialpad_overflow_margin"
         android:paddingStart="@dimen/dialpad_digits_menu_left_padding"
         android:paddingEnd="@dimen/dialpad_digits_menu_right_padding"
-        android:background="@drawable/btn_dialpad_key"
+        android:background="@drawable/btn_dialpad_icon"
         android:contentDescription="@string/description_dialpad_overflow"
         android:gravity="center"
         android:src="@drawable/quantum_ic_more_vert_vd_theme_24"
@@ -147,7 +155,7 @@
         android:paddingLeft="@dimen/dialpad_digits_padding"
         android:paddingRight="@dimen/dialpad_digits_padding"
         android:layout_margin="@dimen/dialpad_overflow_margin"
-        android:background="@drawable/btn_dialpad_key"
+        android:background="@drawable/btn_dialpad_icon"
         android:contentDescription="@string/description_delete_button"
         android:src="@drawable/quantum_ic_backspace_vd_theme_24"
         android:state_enabled="false"

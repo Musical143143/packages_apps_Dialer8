@@ -68,7 +68,10 @@
       layout="@layout/bottom_nav_bar_layout"
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
-      android:layout_alignParentBottom="true"/>
+      android:layout_alignParentBottom="true"
+      android:layout_marginStart="12dp"
+      android:layout_marginEnd="12dp"
+      android:layout_marginBottom="8dp"/>
 
   <!-- Holds Dialpad fragment -->
   <FrameLayout

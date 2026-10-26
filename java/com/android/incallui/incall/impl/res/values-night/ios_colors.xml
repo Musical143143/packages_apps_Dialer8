@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <color name="ios_incall_button_unchecked">#1AFFFFFF</color>
+  <color name="ios_incall_button_top">#40FFFFFF</color>
+  <color name="ios_incall_button_stroke">#4DFFFFFF</color>
+</resources>

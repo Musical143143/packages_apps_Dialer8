@@ -57,7 +57,12 @@
         android:gravity="center_vertical"
         android:focusable="true"
         android:nextFocusRight="@+id/call_back_action"
-        android:nextFocusLeft="@+id/quick_contact_photo">
+        android:nextFocusLeft="@+id/quick_contact_photo"
+            android:background="@drawable/bg_ios27_call_log_card"
+            android:layout_marginStart="12dp"
+            android:layout_marginEnd="12dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="4dp">
 
         <FrameLayout
             android:layout_width="wrap_content"
