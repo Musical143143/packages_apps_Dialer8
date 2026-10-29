@@ -92,7 +92,7 @@
       android:paddingEnd="16dp"
       android:background="@android:color/white"
       android:gravity="center_vertical"
-      android:textColor="#DD000000"
+      android:textColor="?android:attr/textColorPrimary"
       android:textSize="14sp"/>
 
 </LinearLayout>

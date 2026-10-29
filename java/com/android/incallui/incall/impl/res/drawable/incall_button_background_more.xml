@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ripple xmlns:android="http://schemas.android.com/apk/res/android"
-    android:color="#66FFFFFF">
+    android:color="@color/glass_card_top">
     <item>
         <selector>
             <item android:state_checked="true">
@@ -12,7 +12,7 @@
                         android:type="linear" />
                     <stroke
                         android:width="1.5dp"
-                        android:color="#FFFFFFFF" />
+                        android:color="@color/glass_text_primary" />
                     <size android:width="68dp" android:height="68dp" />
                 </shape>
             </item>
@@ -25,7 +25,7 @@
                         android:type="linear" />
                     <stroke
                         android:width="1.5dp"
-                        android:color="#FFFFFFFF" />
+                        android:color="@color/glass_text_primary" />
                     <size android:width="68dp" android:height="68dp" />
                 </shape>
             </item>
@@ -39,7 +39,7 @@
                         android:type="linear" />
                     <stroke
                         android:width="1dp"
-                        android:color="#4DFFFFFF" />
+                        android:color="@color/glass_card_stroke" />
                     <size android:width="68dp" android:height="68dp" />
                 </shape>
             </item>

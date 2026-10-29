@@ -26,7 +26,7 @@
       android:paddingBottom="12dp"
       android:paddingStart="24dp"
       android:paddingEnd="24dp"
-      android:textColor="#DE000000"
+      android:textColor="?android:attr/textColorPrimary"
       android:textSize="16sp"/>
 
   <TextView
@@ -37,7 +37,7 @@
       android:paddingStart="24dp"
       android:paddingEnd="24dp"
       android:text="@string/rtt_request_dialog_more_information"
-      android:textColor="#8A000000"
+      android:textColor="?android:attr/textColorSecondary"
       android:textSize="14sp"/>
 
   <LinearLayout
@@ -61,7 +61,7 @@
         android:fontFamily="@*android:string/config_headlineFontFamilyMedium"
         android:stateListAnimator="@null"
         android:text="@string/rtt_button_decline_request"
-        android:textColor="#757575"/>
+        android:textColor="?android:attr/textColorHint"/>
     <Button
         android:id="@+id/rtt_button_accept_request"
         style="@style/Widget.AppCompat.Button"
