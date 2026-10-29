@@ -94,6 +94,10 @@
   </style>
   <style name="DialerActionBarBaseTheme" parent="@style/ThemeOverlay.AppCompat.ActionBar" />
 
+  <!-- Base settings style. Existing Dialer.Settings.* styles are children of this name, and
+       references to it must resolve or aapt2 fails the link step. -->
+  <style name="Dialer.Settings" />
+
   <style name="Dialer.Settings.PreferenceTheme" parent="@style/PreferenceThemeOverlay">
     <item name="switchPreferenceCompatStyle">@style/Dialer.SwitchPreferenceCompat</item>
     <item name="preferenceStyle">@style/Dialer.Settings.GlassPreference</item>
