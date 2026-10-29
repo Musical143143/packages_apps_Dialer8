@@ -125,6 +125,17 @@ public class AnswerFragment extends Fragment
   private static final int STATUS_BAR_DISABLE_HOME = 0x00200000;
   private static final int STATUS_BAR_DISABLE_BACK = 0x00400000;
 
+  /** Adds the animated RGB edge glow on top of the incoming-call screen. */
+  private static void attachEdgeGlow(View root) {
+    if (root instanceof ViewGroup) {
+      ((ViewGroup) root)
+          .addView(
+              new EdgeGlowView(root.getContext()),
+              new ViewGroup.LayoutParams(
+                  ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT));
+    }
+  }
+
   private static void fadeToward(View view, float newAlpha) {
     view.setAlpha(MathUtil.lerp(view.getAlpha(), newAlpha, ANIMATE_LERP_PROGRESS));
   }
@@ -725,6 +736,7 @@ public class AnswerFragment extends Fragment
       }
     }
 
+    attachEdgeGlow(view);
     Trace.endSection();
     return view;
   }
