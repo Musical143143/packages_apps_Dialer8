@@ -96,6 +96,12 @@
 
   <style name="Dialer.Settings.PreferenceTheme" parent="@style/PreferenceThemeOverlay">
     <item name="switchPreferenceCompatStyle">@style/Dialer.SwitchPreferenceCompat</item>
+    <item name="preferenceStyle">@style/Dialer.Settings.GlassPreference</item>
+  </style>
+
+  <!-- Frosted-glass settings row: the custom layout supplies the glass card surface. -->
+  <style name="Dialer.Settings.GlassPreference">
+    <item name="android:layout">@layout/glass_preference</item>
   </style>
 
 
