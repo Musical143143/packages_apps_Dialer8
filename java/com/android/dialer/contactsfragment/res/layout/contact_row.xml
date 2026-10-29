@@ -33,7 +33,7 @@
       android:paddingBottom="@dimen/row_top_bottom_padding"
       android:paddingStart="@dimen/row_start_padding"
       android:gravity="center_vertical"
-      android:background="?android:attr/selectableItemBackground"
+      android:background="@drawable/glass_card_pressed"
     android:layout_marginTop="4dp"
     android:layout_marginBottom="4dp">
 
