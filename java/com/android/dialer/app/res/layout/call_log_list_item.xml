@@ -43,7 +43,7 @@
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
       android:orientation="vertical"
-      android:background="@drawable/glass_card">
+      android:background="@drawable/glass_pill">
 
       <!-- Primary area containing the contact badge and caller information -->
       <LinearLayout
