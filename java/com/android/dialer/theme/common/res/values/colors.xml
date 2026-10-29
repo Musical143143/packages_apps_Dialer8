@@ -35,5 +35,15 @@
 
   <color name="cardBackgroundColor">@android:color/system_neutral1_50</color>
 
-  <!-- Soft translucent grouped-card surface (iOS / HyperOS style). -->
+  <!-- Frosted-glass tokens (light). -->
+  <color name="glass_card_top">#CCFFFFFF</color>
+  <color name="glass_card_bottom">#A8FFFFFF</color>
+  <color name="glass_card_stroke">#33000000</color>
+  <color name="glass_pressed">#1F000000</color>
+  <color name="glass_key_top">#E6FFFFFF</color>
+  <color name="glass_key_bottom">#B3FFFFFF</color>
+  <color name="glass_text_primary">#E6000000</color>
+  <color name="glass_text_secondary">#8C000000</color>
+  <color name="glass_destructive">#FFFF3B30</color>
+  <color name="glass_accent">#FF007AFF</color>
 </resources>

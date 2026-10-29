@@ -22,4 +22,15 @@
   <color name="dialer_snackbar_action_text_color">@android:color/system_accent1_600</color>
   <color name="dialer_call_icon_color">@android:color/black</color>
 
+  <!-- Frosted-glass tokens (dark). -->
+  <color name="glass_card_top">#C21C1C1E</color>
+  <color name="glass_card_bottom">#9E1C1C1E</color>
+  <color name="glass_card_stroke">#33FFFFFF</color>
+  <color name="glass_pressed">#24FFFFFF</color>
+  <color name="glass_key_top">#38FFFFFF</color>
+  <color name="glass_key_bottom">#14FFFFFF</color>
+  <color name="glass_text_primary">#F2FFFFFF</color>
+  <color name="glass_text_secondary">#99FFFFFF</color>
+  <color name="glass_destructive">#FFFF453A</color>
+  <color name="glass_accent">#FF0A84FF</color>
 </resources>

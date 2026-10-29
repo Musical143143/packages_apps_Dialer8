@@ -42,4 +42,8 @@
     <item name="android:layout_margin">0dp</item>
     <item name="cardBackgroundColor">@color/cardBackgroundColor</item>
   </style>
+  <style name="GlassSheetAnimation">
+    <item name="android:windowEnterAnimation">@anim/glass_sheet_enter</item>
+    <item name="android:windowExitAnimation">@anim/glass_sheet_exit</item>
+  </style>
 </resources>

@@ -44,6 +44,7 @@ import android.text.TextUtils;
 import android.transition.TransitionManager;
 import android.view.ContextMenu;
 import android.view.MenuItem;
+import android.view.Menu;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.ViewStub;
@@ -59,6 +60,8 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.android.contacts.common.dialog.CallSubjectDialog;
 import com.android.dialer.R;
+import com.android.dialer.glass.GlassActionSheet;
+import androidx.appcompat.view.menu.MenuBuilder;
 import com.android.dialer.app.calllog.CallLogAdapter.OnActionModeStateChangedListener;
 import com.android.dialer.app.calllog.calllogcache.CallLogCache;
 import com.android.dialer.app.voicemail.VoicemailPlaybackLayout;
@@ -978,6 +981,11 @@ public final class CallLogListItemViewHolder extends RecyclerView.ViewHolder
               BidiFormatter.getInstance().unicodeWrap(number, TextDirectionHeuristics.LTR)));
     }
 
+    addMenuItems(menu);
+  }
+
+  /** Adds the row actions shared by the system context menu and the glass action card. */
+  private void addMenuItems(Menu menu) {
     menu.add(
             ContextMenu.NONE,
             R.id.context_menu_copy_to_clipboard,
@@ -1028,6 +1036,37 @@ public final class CallLogListItemViewHolder extends RecyclerView.ViewHolder
       menu.add(ContextMenu.NONE, R.id.context_menu_delete, ContextMenu.NONE, R.string.delete)
           .setOnMenuItemClickListener(this);
     }
+  }
+
+  /** Shows the frosted-glass action card for this row. Returns false when there is no number. */
+  public boolean showGlassActionSheet(View blurTarget) {
+    if (TextUtils.isEmpty(number)) {
+      return false;
+    }
+    final MenuBuilder menuBuilder = new MenuBuilder(context);
+    addMenuItems(menuBuilder);
+    GlassActionSheet sheet = new GlassActionSheet(context, blurTarget);
+    sheet.setTitle(
+        callType == CallLog.Calls.VOICEMAIL_TYPE
+            ? context.getText(R.string.voicemail)
+            : BidiFormatter.getInstance().unicodeWrap(number, TextDirectionHeuristics.LTR));
+    for (int i = 0; i < menuBuilder.size(); i++) {
+      final MenuItem item = menuBuilder.getItem(i);
+      boolean destructive =
+          item.getItemId() == R.id.context_menu_delete
+              || item.getItemId() == R.id.context_menu_block;
+      sheet.addAction(
+          item.getTitle(),
+          destructive,
+          new Runnable() {
+            @Override
+            public void run() {
+              menuBuilder.performItemAction(item, 0);
+            }
+          });
+    }
+    sheet.show();
+    return true;
   }
 
   public interface OnClickListener {

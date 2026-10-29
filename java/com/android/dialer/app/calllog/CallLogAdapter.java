@@ -238,7 +238,9 @@ public class CallLogAdapter extends GroupingListAdapter
               return true;
             }
           }
-          return true;
+          Object tag = v.getTag();
+          return tag instanceof CallLogListItemViewHolder
+              && ((CallLogListItemViewHolder) tag).showGlassActionSheet(v.getRootView());
         }
       };
 
