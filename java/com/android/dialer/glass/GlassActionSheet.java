@@ -158,7 +158,9 @@ public final class GlassActionSheet {
 
   @RequiresApi(Build.VERSION_CODES.S)
   private void applyBlur() {
-    if (blurTarget != null && Build.VERSION.SDK_INT >= Build.VERSION_CODES.S) {
+    if (blurTarget != null
+        && Build.VERSION.SDK_INT >= Build.VERSION_CODES.S
+        && GlassSettings.isBlurEnabled(context)) {
       blurTarget.setRenderEffect(
           RenderEffect.createBlurEffect(BLUR_RADIUS_PX, BLUR_RADIUS_PX, Shader.TileMode.CLAMP));
     }

@@ -516,4 +516,12 @@
 
   <!-- Label under the name of a spam number in the call log. [CHAR LIMIT=15] -->
   <string name="spam_number_call_log_label">Spam</string>
+  <!-- Settings: toggle for the animated RGB glow on the incoming-call screen. [CHAR LIMIT=40] -->
+  <string name="glass_edge_glow_title">Incoming call edge glow</string>
+  <!-- Settings summary for the incoming-call edge glow toggle. [CHAR LIMIT=80] -->
+  <string name="glass_edge_glow_summary">Show an animated colour glow around the screen edge on incoming calls</string>
+  <!-- Settings: toggle for the background blur behind frosted-glass cards. [CHAR LIMIT=40] -->
+  <string name="glass_blur_title">Frosted glass blur</string>
+  <!-- Settings summary for the frosted-glass blur toggle. [CHAR LIMIT=80] -->
+  <string name="glass_blur_summary">Blur the screen behind frosted-glass cards on Android 12 and later</string>
 </resources>

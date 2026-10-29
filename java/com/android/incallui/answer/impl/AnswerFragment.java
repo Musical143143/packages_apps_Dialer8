@@ -127,7 +127,8 @@ public class AnswerFragment extends Fragment
 
   /** Adds the animated RGB edge glow on top of the incoming-call screen. */
   private static void attachEdgeGlow(View root) {
-    if (root instanceof ViewGroup) {
+    if (root instanceof ViewGroup
+        && com.android.dialer.glass.GlassSettings.isEdgeGlowEnabled(root.getContext())) {
       ((ViewGroup) root)
           .addView(
               new EdgeGlowView(root.getContext()),

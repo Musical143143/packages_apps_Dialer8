@@ -43,7 +43,21 @@
       android:key="fullscreen_caller_photo"
       android:title="@string/fullscreen_caller_photo_title"
       android:summary="@string/fullscreen_caller_photo_summary"
-      android:defaultValue="false" />
-      app:iconSpaceReserved="false"/>
+      android:defaultValue="false"
+      app:iconSpaceReserved="false" />
+
+  <SwitchPreferenceCompat
+      android:key="glass_edge_glow_enabled"
+      android:title="@string/glass_edge_glow_title"
+      android:summary="@string/glass_edge_glow_summary"
+      android:defaultValue="true"
+      app:iconSpaceReserved="false" />
+
+  <SwitchPreferenceCompat
+      android:key="glass_blur_enabled"
+      android:title="@string/glass_blur_title"
+      android:summary="@string/glass_blur_summary"
+      android:defaultValue="true"
+      app:iconSpaceReserved="false" />
 
 </PreferenceScreen>
