@@ -49,4 +49,9 @@
   <color name="glass_on_inverse">#FFFFFFFF</color>
   <color name="glass_backdrop_top">#FFEAF0FA</color>
   <color name="glass_backdrop_bottom">#FFD2DCEC</color>
+  <!-- Call screen backdrop is always dark so its white labels and icons stay readable. -->
+  <color name="glass_incall_top">#FF0E1220</color>
+  <color name="glass_incall_bottom">#FF1A2036</color>
+  <color name="glass_on_dark">#FFFFFFFF</color>
+  <color name="glass_on_light">#FF1C1C1E</color>
 </resources>

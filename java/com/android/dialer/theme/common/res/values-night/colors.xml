@@ -23,9 +23,9 @@
   <color name="dialer_call_icon_color">@android:color/black</color>
 
   <!-- Frosted-glass tokens (dark). -->
-  <color name="glass_card_top">#C21C1C1E</color>
-  <color name="glass_card_bottom">#9E1C1C1E</color>
-  <color name="glass_card_stroke">#33FFFFFF</color>
+  <color name="glass_card_top">#F22C2C2E</color>
+  <color name="glass_card_bottom">#EE1C1C1E</color>
+  <color name="glass_card_stroke">#40FFFFFF</color>
   <color name="glass_pressed">#24FFFFFF</color>
   <color name="glass_key_top">#38FFFFFF</color>
   <color name="glass_key_bottom">#14FFFFFF</color>

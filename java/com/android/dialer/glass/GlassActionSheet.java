@@ -77,8 +77,8 @@ public final class GlassActionSheet {
     }
     window.setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
     window.setLayout(WindowManager.LayoutParams.MATCH_PARENT,
-        WindowManager.LayoutParams.WRAP_CONTENT);
-    window.setGravity(Gravity.BOTTOM);
+        WindowManager.LayoutParams.MATCH_PARENT);
+    window.setGravity(Gravity.CENTER);
     window.addFlags(WindowManager.LayoutParams.FLAG_DIM_BEHIND);
     window.setDimAmount(0.25f);
     window.setWindowAnimations(R.style.GlassSheetAnimation);
@@ -101,15 +101,18 @@ public final class GlassActionSheet {
   }
 
   private View buildContent() {
-    int pad = dp(16);
+    int pad = dp(24);
     LinearLayout root = new LinearLayout(context);
     root.setOrientation(LinearLayout.VERTICAL);
+    root.setGravity(Gravity.CENTER);
     root.setPadding(pad, pad, pad, pad);
 
     LinearLayout card = new LinearLayout(context);
     card.setOrientation(LinearLayout.VERTICAL);
     card.setBackgroundResource(R.drawable.glass_card);
     card.setPadding(0, dp(8), 0, dp(8));
+    card.setClipToOutline(true);
+    card.setElevation(dp(12));
 
     if (!TextUtils.isEmpty(title)) {
       TextView titleView = new TextView(context);
@@ -118,7 +121,7 @@ public final class GlassActionSheet {
       titleView.setEllipsize(TextUtils.TruncateAt.END);
       titleView.setTextSize(TypedValue.COMPLEX_UNIT_SP, 13);
       titleView.setTextColor(context.getColor(R.color.glass_text_secondary));
-      titleView.setPadding(dp(20), dp(12), dp(20), dp(10));
+      titleView.setPadding(dp(20), dp(14), dp(20), dp(10));
       card.addView(titleView, new LinearLayout.LayoutParams(
           LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT));
     }
@@ -143,8 +146,10 @@ public final class GlassActionSheet {
           LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT));
     }
 
+    int maxWidth = Math.min(
+        context.getResources().getDisplayMetrics().widthPixels - 2 * pad, dp(340));
     root.addView(card, new LinearLayout.LayoutParams(
-        LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT));
+        maxWidth, LinearLayout.LayoutParams.WRAP_CONTENT));
     return root;
   }
 

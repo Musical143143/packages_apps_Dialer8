@@ -4,7 +4,7 @@
     <color name="incall_background_gradient_middle">#FF2A2029</color>
     <color name="incall_background_gradient_bottom">#FF090C1C</color>
     <color name="incall_background_multiwindow">@color/dialer_theme_color_dark</color>
-    <color name="incall_button_icon_color">@color/glass_on_inverse</color>
+    <color name="incall_button_icon_color">@color/glass_on_light</color>
     <!-- There is a nearby, more-convenient universe in which the following neutral colors are
          automatically adapted and do not need to be specified separately in this -night variant.
          If the RTT banner items become invisible again in the future, try changing these to
