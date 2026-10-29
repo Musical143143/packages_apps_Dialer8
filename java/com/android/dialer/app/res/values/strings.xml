@@ -527,5 +527,5 @@
   <!-- Settings: toggle for answering or declining calls with a wave over the proximity sensor. [CHAR LIMIT=40] -->
   <string name="air_gesture_title">Wave to answer or decline</string>
   <!-- Settings summary for the wave gesture toggle. [CHAR LIMIT=120] -->
-  <string name="air_gesture_summary">Wave once over the top of the phone to answer, or twice to decline. Responds to anything covering the sensor, not only hands. Off by default.</string>
+  <string name="air_gesture_summary">Needs hand detection, which is not added yet. Until then this does nothing and never accepts or declines a call.</string>
 </resources>

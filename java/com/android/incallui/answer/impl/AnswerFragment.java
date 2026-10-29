@@ -142,6 +142,9 @@ public class AnswerFragment extends Fragment
 
   /** Starts the wave gesture while the incoming call is showing, if the user turned it on. */
   private void startAirGesture() {
+    if (!AirGestureController.HAND_DETECTION_AVAILABLE) {
+      return;
+    }
     if (getContext() == null
         || !com.android.dialer.glass.GlassSettings.isAirGestureEnabled(getContext())) {
       return;

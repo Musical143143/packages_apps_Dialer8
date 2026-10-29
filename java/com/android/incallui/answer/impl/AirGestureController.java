@@ -38,6 +38,13 @@ import androidx.annotation.Nullable;
  */
 public class AirGestureController implements SensorEventListener {
 
+  /**
+   * Whether a hand detector is available to confirm the gesture is from a hand. The proximity
+   * sensor cannot tell a hand from a body part or an object, so the wave never accepts or declines
+   * a call until hand detection is added and this is set to true.
+   */
+  public static final boolean HAND_DETECTION_AVAILABLE = false;
+
   /** What the gesture is currently about to do. */
   public enum Preview {
     NONE,
