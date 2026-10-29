@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources>
-  <!-- Translucent glass fill for in-call round buttons. -->
-  <color name="ios_incall_button_unchecked">#14000000</color>
-  <color name="ios_incall_button_top">#26000000</color>
-  <color name="ios_incall_button_stroke">#26000000</color>
-</resources>

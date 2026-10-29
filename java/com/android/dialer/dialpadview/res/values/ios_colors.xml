@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources>
-  <!-- Soft translucent key fill (iOS / HyperOS style). -->
-  <color name="ios_dialpad_key_fill">#12000000</color>
-  <!-- Liquid glass key: top highlight, bottom body, edge. -->
-  <color name="ios_glass_top">#1A000000</color>
-  <color name="ios_glass_bottom">#0A000000</color>
-  <color name="ios_glass_stroke">#26000000</color>
-</resources>

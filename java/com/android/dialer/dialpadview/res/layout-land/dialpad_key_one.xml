@@ -22,7 +22,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/one"
     style="@style/DialpadKeyButtonStyle"
-    android:background="@drawable/bg_ios27_dialpad_key"
+    android:background="@android:color/transparent"
     android:layout_margin="6dp">
 
   <LinearLayout
