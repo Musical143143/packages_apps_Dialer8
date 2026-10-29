@@ -21,13 +21,13 @@
    -->
   <style name="Dialer.TextAppearance.Header1" parent="TextAppearance.AppCompat">
     <item name="android:textColor">?android:attr/textColorPrimary</item>
-    <item name="android:textSize">18sp</item>
+    <item name="android:textSize">22sp</item>
     <item name="android:fontFamily">@*android:string/config_bodyFontFamily</item>
   </style>
 
   <style name="Dialer.TextAppearance.Header2" parent="TextAppearance.AppCompat">
     <item name="android:textColor">?android:attr/textColorPrimary</item>
-    <item name="android:textSize">16sp</item>
+    <item name="android:textSize">18sp</item>
     <item name="android:fontFamily">@*android:string/config_headlineFontFamilyMedium</item>
   </style>
 
@@ -57,7 +57,8 @@
 
   <style name="Dialer.TextAppearance.OVERLINE" parent="TextAppearance.AppCompat">
     <item name="android:textColor">?android:attr/textColorSecondary</item>
-    <item name="android:textSize">14sp</item>
+    <item name="android:textSize">12sp</item>
+    <item name="android:letterSpacing">0.06</item>
     <item name="android:fontFamily">@*android:string/config_headlineFontFamilyMedium</item>
   </style>
 

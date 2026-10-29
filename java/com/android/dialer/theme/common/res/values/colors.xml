@@ -46,6 +46,7 @@
   <color name="glass_text_secondary">#8C000000</color>
   <color name="glass_destructive">#FFFF3B30</color>
   <color name="glass_accent">#FF007AFF</color>
+  <color name="glass_on_inverse">#FFFFFFFF</color>
   <color name="glass_backdrop_top">#FFEAF0FA</color>
   <color name="glass_backdrop_bottom">#FFD2DCEC</color>
 </resources>
