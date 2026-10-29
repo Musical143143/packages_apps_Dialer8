@@ -60,11 +60,4 @@
       android:defaultValue="true"
       app:iconSpaceReserved="false" />
 
-  <SwitchPreferenceCompat
-      android:key="air_gesture_enabled"
-      android:title="@string/air_gesture_title"
-      android:summary="@string/air_gesture_summary"
-      android:defaultValue="false"
-      app:iconSpaceReserved="false" />
-
 </PreferenceScreen>

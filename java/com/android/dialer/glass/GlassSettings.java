@@ -29,14 +29,7 @@ public final class GlassSettings {
   /** Preference key for the background blur behind frosted-glass cards. */
   public static final String KEY_BLUR_ENABLED = "glass_blur_enabled";
 
-  /** Preference key for the wave gesture (proximity sensor) on the incoming-call screen. */
-  public static final String KEY_AIR_GESTURE_ENABLED = "air_gesture_enabled";
-
   private GlassSettings() {}
-
-  public static boolean isAirGestureEnabled(Context context) {
-    return prefs(context).getBoolean(KEY_AIR_GESTURE_ENABLED, false);
-  }
 
   public static boolean isEdgeGlowEnabled(Context context) {
     return prefs(context).getBoolean(KEY_EDGE_GLOW_ENABLED, true);

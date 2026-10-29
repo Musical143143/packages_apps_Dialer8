@@ -125,64 +125,6 @@ public class AnswerFragment extends Fragment
   private static final int STATUS_BAR_DISABLE_HOME = 0x00200000;
   private static final int STATUS_BAR_DISABLE_BACK = 0x00400000;
 
-  /** Adds the wave-gesture preview ring, centred over the incoming-call screen. */
-  private void attachAirGesturePreview(View root) {
-    if (!(root instanceof ViewGroup)) {
-      return;
-    }
-    AirGesturePreviewView preview = new AirGesturePreviewView(root.getContext());
-    int size = preview.preferredSizePx();
-    ((ViewGroup) root)
-        .addView(
-            preview,
-            new android.widget.FrameLayout.LayoutParams(
-                size, size, android.view.Gravity.CENTER));
-    airGesturePreview = preview;
-  }
-
-  /** Starts the wave gesture while the incoming call is showing, if the user turned it on. */
-  private void startAirGesture() {
-    if (getContext() == null
-        || !com.android.dialer.glass.GlassSettings.isAirGestureEnabled(getContext())) {
-      return;
-    }
-    if (airGestureController == null) {
-      airGestureController =
-          new AirGestureController(
-              getContext(),
-              new AirGestureController.Listener() {
-                @Override
-                public void onGesturePreview(
-                    AirGestureController.Preview preview, float progress) {
-                  if (airGesturePreview != null) {
-                    airGesturePreview.setPreview(preview, progress);
-                  }
-                }
-
-                @Override
-                public void onAccept() {
-                  if (!buttonAcceptClicked && !buttonRejectClicked) {
-                    acceptCallByUser(false);
-                  }
-                }
-
-                @Override
-                public void onReject() {
-                  if (!buttonAcceptClicked && !buttonRejectClicked) {
-                    rejectCall();
-                  }
-                }
-              });
-    }
-    airGestureController.start();
-  }
-
-  private void stopAirGesture() {
-    if (airGestureController != null) {
-      airGestureController.stop();
-    }
-  }
-
   /** Adds the animated RGB edge glow on top of the incoming-call screen. */
   private static void attachEdgeGlow(View root) {
     if (root instanceof ViewGroup
@@ -218,8 +160,6 @@ public class AnswerFragment extends Fragment
   // the user a chance to get out of the CallActivity.
   private boolean buttonAcceptClicked;
   private boolean buttonRejectClicked;
-  @Nullable private AirGestureController airGestureController;
-  @Nullable private AirGesturePreviewView airGesturePreview;
   private boolean hasAnimatedEntry;
   private PrimaryInfo primaryInfo = PrimaryInfo.empty();
   private PrimaryCallState primaryCallState;
@@ -798,7 +738,6 @@ public class AnswerFragment extends Fragment
     }
 
     attachEdgeGlow(view);
-    attachAirGesturePreview(view);
     Trace.endSection();
     return view;
   }
@@ -824,7 +763,6 @@ public class AnswerFragment extends Fragment
 
   @Override
   public void onResume() {
-    startAirGesture();
     Trace.beginSection("AnswerFragment.onResume");
     super.onResume();
     LogUtil.i("AnswerFragment.onResume", null);
@@ -861,7 +799,6 @@ public class AnswerFragment extends Fragment
 
   @Override
   public void onPause() {
-    stopAirGesture();
     Trace.beginSection("AnswerFragment.onPause");
     super.onPause();
     LogUtil.i("AnswerFragment.onPause", null);
