@@ -22,7 +22,7 @@
   android:id="@+id/call_subject_dialog"
   android:layout_width="match_parent"
   android:layout_height="match_parent"
-  android:background="@android:color/transparent"
+  android:background="@drawable/glass_card"
   android:orientation="vertical">
 
   <RelativeLayout

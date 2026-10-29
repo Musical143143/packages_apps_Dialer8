@@ -18,7 +18,7 @@
 <com.android.dialer.dialpadview.DialpadKeyButton
     xmlns:android="http://schemas.android.com/apk/res/android"
     style="@style/DialpadKeyButtonStyle"
-    android:background="@android:color/transparent"
+    android:background="@drawable/glass_key"
     android:layout_margin="6dp">
 
   <LinearLayout
