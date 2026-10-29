@@ -283,6 +283,10 @@ public final class CallLogListItemViewHolder extends RecyclerView.ViewHolder
       quickContactView.setMulitSelectListeners(
           this.expandCollapseListener, onActionModeStateChangedListener);
     } else {
+      // Long press opens the frosted-glass action card; the system context menu stays as the
+      // fallback for rows with no number, because the glass card returns false for those.
+      primaryActionView.setOnLongClickListener(longPressListener);
+      quickContactView.setOnLongClickListener(longPressListener);
       primaryActionView.setOnCreateContextMenuListener(this);
     }
   }

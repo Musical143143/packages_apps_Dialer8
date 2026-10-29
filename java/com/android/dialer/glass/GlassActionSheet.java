@@ -126,7 +126,15 @@ public final class GlassActionSheet {
           LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT));
     }
 
+    boolean first = true;
     for (final Action action : actions) {
+      if (!first) {
+        LinearLayout.LayoutParams lp = new LinearLayout.LayoutParams(
+            LinearLayout.LayoutParams.MATCH_PARENT, dp(1));
+        lp.setMargins(dp(20), 0, dp(20), 0);
+        card.addView(divider(), lp);
+      }
+      first = false;
       TextView row = new TextView(context);
       row.setText(action.label);
       row.setTextSize(TypedValue.COMPLEX_UNIT_SP, 17);
@@ -151,6 +159,13 @@ public final class GlassActionSheet {
     root.addView(card, new LinearLayout.LayoutParams(
         maxWidth, LinearLayout.LayoutParams.WRAP_CONTENT));
     return root;
+  }
+
+  /** A hairline divider inset from the card edges, drawn between the actions. */
+  private View divider() {
+    View line = new View(context);
+    line.setBackgroundColor(context.getColor(R.color.glass_card_stroke));
+    return line;
   }
 
   private Drawable rippleBackground() {
